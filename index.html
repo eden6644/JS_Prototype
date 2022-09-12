@@ -8,10 +8,22 @@
 
     <script>
         var eleve = {
-            nom: 'Caleb',
             presence: function(){
                 console.log(this);
+            },
+            moyenne: function(){
+                var somme = 0
+                for(var i = 0; i<this.notes.length; i++){
+                    somme+= this.notes[i]
+                }
+                return somme/this.notes.length
             }
+        }
+        var jean = {
+            nom :'Jean'
+        }
+        var marc = {
+            nom: 'Marc'
         }
         eleve.presence();
     </script>
