@@ -20,12 +20,16 @@
             }
         }
         var jean = {
-            nom :'Jean'
+            nom :'Jean',
+            notes: [10, 20]
         }
         var marc = {
-            nom: 'Marc'
+            nom: 'Marc',
+            notes: [20, 20]
         }
-        eleve.presence();
+        //define prototype of jean and marc as eleve
+        jean.__proto__ = eleve;
+        marc.__proto__ = eleve;
     </script>
 </head>
 <body>
