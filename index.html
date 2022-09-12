@@ -27,9 +27,22 @@
             nom: 'Marc',
             notes: [20, 20]
         }
-        //define prototype of jean and marc as eleve
+        //define prototype of jean and marc as eleve version pas conseillé
         jean.__proto__ = eleve;
         marc.__proto__ = eleve;
+
+        //creating and define object caleb and joshua as eleve good version
+        var caleb = Object.create(eleve)
+        caleb.nom = 'Caleb'
+        console.log(caleb.nom);
+        caleb.notes = [70, 10, 100]
+        console.log(caleb.moyenne());
+
+        var joshua = Object.create(eleve)
+        joshua.nom = 'Joshua'
+        joshua.notes = [50, 70, 100]
+        console.log(joshua.nom);
+        console.log(joshua.moyenne());
     </script>
 </head>
 <body>
