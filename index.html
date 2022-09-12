@@ -43,6 +43,17 @@
         joshua.notes = [50, 70, 100]
         console.log(joshua.nom);
         console.log(joshua.moyenne());
+
+        //methode des constructeur final et plus pratique
+        //constructeur
+        var Eleve = function(nom, notes){
+            this.nom = nom;
+            this.notes = notes;
+        }
+
+        var dorcas = new Eleve('Dorcas', [50, 60, 100]);
+        
+        var levi = new Eleve('Lévi-Joel', [30, 30, 40, 100]);
     </script>
 </head>
 <body>
