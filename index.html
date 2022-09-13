@@ -47,12 +47,17 @@
         //methode des constructeur final et plus pratique
         //constructeur
         var Eleve = function(nom, notes){
-            this.nom = nom;
-            this.notes = notes;
+            this.nom = nom
+            this.notes = notes
         }
-
+        Eleve.prototype.moyenne = function(){
+            var somme = 0
+                for(var i = 0; i<this.notes.length; i++){
+                    somme+= this.notes[i]
+                }
+                return somme/this.notes.length
+        }
         var dorcas = new Eleve('Dorcas', [50, 60, 100]);
-        
         var levi = new Eleve('Lévi-Joel', [30, 30, 40, 100]);
     </script>
 </head>
